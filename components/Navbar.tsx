@@ -6,6 +6,7 @@ import { FC } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import React from "react";
+import styles from "@/components/Navbar.module.css";
 interface NavbarProps {
   loginStatus: boolean;
 }
@@ -14,7 +15,7 @@ const Navbar: FC<NavbarProps> = ({ loginStatus }: NavbarProps) => {
   const swal = withReactContent(Swal);
   const router = useRouter();
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className={`navbar navbar-light bg-light fixed-top`}>
       <Link href={"/"} className="navbar-brand m-2">
         Todo-app
       </Link>

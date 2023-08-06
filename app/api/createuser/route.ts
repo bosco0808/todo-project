@@ -9,7 +9,7 @@ interface reqBody {
 
 export async function POST(req: Request) {
   const { username, password, authkey }: reqBody = await req.json();
-  if (!authkey) {
+  if (!authkey || authkey !== process.env.NEXT_PUBLIC_AUTHKEY) {
     return new Response(
       JSON.stringify({
         auth: false,

@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar loginStatus={loginStatus} />
-        {children}
+        <div style={{ paddingTop: 80 }}>{children}</div>
         <Footer />
       </body>
     </html>
