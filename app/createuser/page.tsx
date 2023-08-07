@@ -44,7 +44,7 @@ const CreateUser = () => {
       swal.fire({ text: "User with the same name already exists" });
       return;
     }
-    swal.fire({ text: "user successfully created!" });
+    swal.fire({ text: "user successfully created!", icon: "success" });
     cookie.set("password", hash, {
       expires: 1, // Expires in 1 day
       path: "/",
